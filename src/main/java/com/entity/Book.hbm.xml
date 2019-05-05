@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!--实体类和表之间映射关系的配置-->
+<hibernate-mapping>
+    <class name="com.entity.Book" table="t_book">
+        <id name="id">
+            <column name="b_id"/>
+            <generator class="identity"/>  <!--数据库自增-->
+        </id>
+
+        <property name="name">
+            <column name="b_name"></column>
+        </property>
+
+        <property name="author">
+            <column name="b_author"></column>
+        </property>
+
+        <property name="price">
+            <column name="b_price"></column>
+        </property>
+    </class>
+
+</hibernate-mapping>
